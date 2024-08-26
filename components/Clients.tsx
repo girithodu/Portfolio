@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 import { companies, testimonials } from "@/data";
+import Image from "next/image";
 
 const Clients = () => {
   return (
@@ -19,8 +19,20 @@ const Clients = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
           {companies.map(({ id, img, name, nameImg }) => (
             <div key={id} className="flex md:max-w-60 max-w-32 gap-2 ">
-              <img src={img} alt={name} className="md:w-10 w-5 " />
-              <img src={nameImg} alt={name} className="md:w-24 w-20 " />
+              <Image
+                src={img}
+                alt={name}
+                width={40} // Assuming 10 * 4 for the largest size (md)
+                height={40} // Assuming a square image, adjust if not
+                className="md:w-10 w-5"
+              />
+              <Image
+                src={nameImg}
+                alt={name}
+                width={96} // Assuming 24 * 4 for the largest size (md)
+                height={96} // Assuming a square image, adjust if not
+                className="md:w-24 w-20"
+              />
             </div>
           ))}
         </div>
