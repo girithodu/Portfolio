@@ -92,7 +92,7 @@ export const projects = [
     des: "A stock trading app built with Next.js, TypeScript, Python,and Flask. It allows users to buy and sell stocks.",
     img: "/robinhood.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/python-5.svg", "/c.svg"],
-    link: "https://github.com/girithodu/sellscale-robinhood",
+    link: "https://github.com/girithodu/stock-trading",
   },
   {
     id: 4,
